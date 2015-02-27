@@ -3,7 +3,13 @@
  */
 var search = function () {
     console.log('javascript');
-    $.get('/search/term=food&location=San+Francisco', function (data) {
-        console.log('data');
-    });
+    //if ( == 'development') {
+    //    $.get('/search/term=food&location=San+Francisco', function (data) {
+    //        console.log(data);
+    //    });
+    //} else {
+        $.get('https://rocky-everglades-5328.herokuapp.com/search/term=food&location=San+Francisco', function (data) {
+            console.log(data);
+        });
+    //}
 };
