@@ -16,10 +16,11 @@ router.get('/:query', function(req, res, next) {
     console.log(qs.toString());
     var query = req.params['query'];
     console.log('here: ' + qs.parse(query));
-    yelp.search(qs.parse(query), function (error, data) {
+    var stuff = yelp.search(qs.parse(query), function (error, data) {
         console.log(error);
         console.log(data);
     });
+    res.send(stuff);
 });
 
 module.exports = router;
