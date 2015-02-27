@@ -15,7 +15,8 @@
     "serve-favicon": "~2.2.0",
     "qs": "~2.3.x",
     "request": "~2.53.x",
-    "node-yelp": "~0.0.x"
+    "node-yelp": "~0.0.x",
+    "lodash": "~3.3.x"
   },
   "main": "app.js",
   "devDependencies": {},
