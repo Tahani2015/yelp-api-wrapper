@@ -1,6 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  button.button(onclick='search()') press me
+  h1.page-header= title
+  .row
+      .col-xs-offset-3.col-sm-offset-3.col-md-offset-3.col-xs-6.col-sm-6.col-md-6
+          form#search_form
+              .form-group
+                  label(for="term") Term
+                  input.form-control#search_term(type="text")
+              .form-group
+                  label(for="location") Location
+                  input.form-control#search_location(type="text")
+          button.btn.btn-primary#search_button Search

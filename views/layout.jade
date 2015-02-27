@@ -3,11 +3,19 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    <!-- Latest compiled and minified CSS -->
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+    <!-- Optional theme -->
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css")
 
-  body
+  body.container
     block content
+    block search_results
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
-    script(src="javascripts/yelp_client.js")
+    <!-- Latest compiled and minified JavaScript -->
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js")
+        
     script(src="javascripts/search.js")
     script(src="javascripts/business.js")
+    script(src="javascripts/jade.js")

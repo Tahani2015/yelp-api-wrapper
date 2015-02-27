@@ -11,6 +11,7 @@ var search = require('./routes/search');
 var business = require('./routes/business');
 var app = express();
 
+// TODO: this is bad...
 app.locals.yelp = require("yelp").createClient({
     consumer_key: 'UWobTMG9B3mAW5FXp-PNaw',
     consumer_secret: 'gi95WHKwfVe6IUodPU9c1Ks2_Vs',
