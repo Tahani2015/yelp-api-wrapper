@@ -11,7 +11,6 @@ router.get('/:query', function(req, res) {
         if (error) {
             console.log(error);
         } else {
-            console.log(data.type);
             res.send(data);
         }
     });
