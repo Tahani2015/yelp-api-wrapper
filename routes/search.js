@@ -1,4 +1,5 @@
 var express = require('express');
+var qs = require('qs');
 var router = express.Router();
 
 var yelp = require("node-yelp").createClient({
