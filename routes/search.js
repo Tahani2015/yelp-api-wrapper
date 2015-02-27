@@ -1,6 +1,7 @@
 var express = require('express');
 var qs = require('qs');
 var router = express.Router();
+var request = require('request');
 
 var yelp = require("node-yelp").createClient({
     oauth: {
@@ -13,14 +14,18 @@ var yelp = require("node-yelp").createClient({
 
 /* GET home page. */
 router.get('/:query', function(req, res, next) {
-    console.log(qs.toString());
     var query = req.params['query'];
-    console.log('here: ' + qs.parse(query));
-    var stuff = yelp.search(qs.parse(query), function (error, data) {
-        console.log(error);
-        console.log(data);
+    request('http://www.google.com', function (error, response, body) {
+        //console.log('Error: ' + error);
+        //console.log('Response: ' + response);
+        //console.log('Body: ' + body);
     });
-    res.send(stuff);
+    var stuff = yelp.search(qs.parse(query), function (error, data) {
+        console.log('got here');
+        //console.log(error);
+        //console.log(data);
+    });
+    console.log(stuff);
 });
 
 module.exports = router;
