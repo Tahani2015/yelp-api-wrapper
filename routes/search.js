@@ -12,10 +12,10 @@ var yelp = require("node-yelp").createClient({
 
 /* GET home page. */
 router.get('/:query', function(req, res, next) {
-    console.log(Qs.toString());
+    console.log(qs.toString());
     var query = req.params['query'];
-    console.log('here: ' + Qs.parse(query));
-    yelp.search(Qs.parse(query), function (error, data) {
+    console.log('here: ' + qs.parse(query));
+    yelp.search(qs.parse(query), function (error, data) {
         console.log(error);
         console.log(data);
     });
