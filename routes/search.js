@@ -8,7 +8,6 @@ var router = express.Router();
 router.get('/:query', function(req, res) {
     var yelp = req.app.locals.yelp;
     var query = qs.parse(req.params.query);
-    query.limit = 1;
 	//this search function from the json object
     yelp.search(query, function (error, data) {
         if (error) {
