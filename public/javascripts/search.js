@@ -3,17 +3,15 @@
  */
 var search = function (term, location) {
     $.get('/search/term=' + term + '&location=' + location + 'San+Francisco', function (data) {
+        //var results = JSON.parse(JSON.stringify(data));
         console.log(data);
-        var results = JSON.parse(JSON.stringify(data));
-        console.log("results are in!");
-
-        $.get('/templates/search_results.jade', function(template) {
-
-            // render the template
-            var html = jade.render(template, { items: results });
-
-            $('#search_results').html(html);
-        })
+        //$.get('/templates/search_results.jade', function(template) {
+        //
+        //    // render the template
+        //    var html = jade.render(template, { items: results });
+        //
+        //    $('#search_results').html(html);
+        //})
     });
 };
 $('#search_button').on('click', function (event) {

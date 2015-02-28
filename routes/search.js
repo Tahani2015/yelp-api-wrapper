@@ -9,7 +9,7 @@ router.get('/:query', function(req, res) {
     query.limit = 1;
     yelp.search(query, function (error, data) {
         if (error) {
-            console.log(error);
+            res.send(error);
         } else {
             res.send(data);
         }
