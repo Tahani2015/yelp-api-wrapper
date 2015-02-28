@@ -2,7 +2,7 @@
  * Created by jake on 2/26/15.
  */
 var search = function (term, location) {
-    $.get('/search/term=' + term + '&location=' + location + 'San+Francisco', function (data) {
+    $.get('/search/term=' + term + '&location=' + location, function (data) {
         //var results = JSON.parse(JSON.stringify(data));
         console.log(data);
         //$.get('/templates/search_results.jade', function(template) {
