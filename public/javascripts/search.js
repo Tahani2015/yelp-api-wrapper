@@ -7,13 +7,11 @@ var search = function (term, location) {
         var results = JSON.parse(JSON.stringify(data));
         console.log("results are in!");
 
-        $.get('/templates/search_results.jade', function(template) {
 
             // render the template
             var html = jade.render(template, { items: results });
 
             $('#search_results').html(html);
-        })
     });
 };
 $('#search_button').on('click', function (event) {
